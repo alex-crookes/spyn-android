@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "SpynAndroid"
 include(":app")
+include(":provider:discogsapi")
+include(":provider:fileio")

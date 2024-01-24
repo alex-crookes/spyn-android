@@ -1,0 +1,4 @@
+{
+  "last": "https://api.discogs.com/database/search?q=Cars&page=200&per_page=50",
+  "next": "https://api.discogs.com/database/search?q=Cars&page=2&per_page=50"
+}
