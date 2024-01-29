@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class UserStatusDto(
-    @SerialName("in_wantlist") val wanted: Boolean,
-    @SerialName("in_collection") val owned: Boolean
+data class CollectionReleaseNotesDto(
+    @SerialName("field_id") val fieldId: Int,
+    @SerialName("value") val value: String
 )

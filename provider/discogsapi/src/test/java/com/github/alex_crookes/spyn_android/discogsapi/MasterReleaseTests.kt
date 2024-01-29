@@ -16,15 +16,17 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class MasterReleaseTests : DeserializeTests() {
-    private val labelEntityDto = "/label_entity.dto.json"
-    private val recordCompanyEntityDto = "/record_company_entity.dto.json"
-    private val entityCollectionDto = "/entity_collection.dto.json"
-    private val releaseFormatDto = "/release_format.dto.json"
-    private val communityContributorDto = "/community_contributor.dto.json"
-    private val communityRatingDto = "/community_rating.dto.json"
-    private val communityMetaDto = "/release_community_meta.dto.json"
-    private val releaseIdentifier = "/release_identifier.dto.json"
-    private val masterRelease = "/master_release.dto.json"
+    private val labelEntityDto = "/dto/label_entity.dto.json"
+    private val recordCompanyEntityDto = "/dto/record_company_entity.dto.json"
+    private val entityCollectionDto = "/dto/entity_collection.dto.json"
+    private val releaseFormatDto = "/dto/release_format.dto.json"
+    private val communityContributorDto = "/dto/community_contributor.dto.json"
+    private val communityRatingDto = "/dto/community_rating.dto.json"
+    private val communityMetaDto = "/dto/release_community_meta.dto.json"
+    private val releaseIdentifier = "/dto/release_identifier.dto.json"
+    private val masterRelease = "/dto/master_release.dto.json"
+//    private val masterReleaseFormatQuantityFailing =
+//        "/dto/master_release_format_quantity_issue.dto.json"
 
     @Serializable
     private data class EntityTestList(
@@ -159,4 +161,52 @@ class MasterReleaseTests : DeserializeTests() {
             assertEquals("", sut.thumbnail)
         }
     }
+
+
+//    @Test
+//    fun test_MasterReleaseDtoFormatQuantityIssuesDeserialized() {
+//        loadAndDeserialize(masterReleaseFormatQuantityFailing, MasterReleaseDto.serializer()) { sut ->
+//            assertEquals(190219, sut.id)
+//            assertTrue(sut.resourceUrl.contains(sut.id.toString()))
+//            assertTrue(sut.permalink.contains(sut.id.toString()))
+//
+//            assertEquals(1978, sut.year)
+//            assertEquals("Accepted", sut.status)
+//            assertEquals(1, sut.artists.size)
+//            assertEquals("Cars, The", sut.artistsSortName)
+//            assertEquals(1, sut.labels.size)
+//            assertEquals(651, sut.labels.first().id)
+//            assertEquals(0, sut.series.size)
+//            assertEquals(14, sut.companies.size)
+//            assertEquals(1, sut.formats.size)
+//            assertEquals("Complete and Correct", sut.dataQuality)
+//            assertEquals(30390, sut.community.have)
+//            assertEquals(1982, sut.community.rating.ratingCount)
+//            assertEquals("gregclow", sut.community.submitter.userName)
+//            assertEquals(47, sut.community.contributors.size)
+//            assertEquals(1, sut.formatQuantity)
+//            assertTrue(sut.dateAdded.contains("2003"))
+//            assertTrue(sut.dateChanged.contains("2023"))
+//            assertEquals(47, sut.numberForSale)
+//            assertEquals(5.0, sut.lowestPrice, 0.0)
+//            assertEquals(69666, sut.masterId)
+//            assertTrue(sut.masterUrl.contains(sut.masterId.toString()))
+//            assertEquals("06 Jun 1978", sut.releasedFormatted)
+//            assertEquals("The Cars", sut.title)
+//            assertEquals("US", sut.country)
+//            assertEquals("1978-06-06", sut.released)
+//            assertNotNull(sut.notes)
+//
+//            assertEquals(21, sut.identifiers.size)
+//            assertEquals(9, sut.videos.size)
+//            assertEquals(1, sut.genres.size)
+//            assertEquals(3, sut.styles.size)
+//            assertEquals(9, sut.trackList.size)
+//            assertEquals(15, sut.extraArtists.size)
+//            assertEquals(8, sut.images.size)
+//            assertEquals(230, sut.estimatedWeight)
+//            assertFalse(sut.blockedFromSale)
+//            assertEquals("", sut.thumbnail)
+//        }
+//    }
 }

@@ -10,7 +10,6 @@ abstract class DeserializeTests {
 
     fun <T : Any> loadAndDeserialize(fileName: String, deserializer: KSerializer<T>, moreTests: ((T) -> Unit)) {
         val dto = fileIO.readClassFromResources(fileName, deserializer)
-        assertNotNull(dto)
 
         val sut = dto ?: throw Exception("Expected not to be null")
         moreTests(sut)

@@ -12,11 +12,11 @@ import org.junit.Test
 
 class ReleaseTests : DeserializeTests() {
 
-    private val artistDto = "/artist.dto.json"
-    private val releaseImageDtp = "/release_image.dto.json"
-    private val releaseVideoDto = "/release_video.dto.json"
-    private val trackDto = "/release_track.dto.json"
-    private val releaseDto = "/release.dto.json"
+    private val artistDto = "/dto/artist.dto.json"
+    private val releaseImageDtp = "/dto/release_image.dto.json"
+    private val releaseVideoDto = "/dto/release_video.dto.json"
+    private val trackDto = "/dto/release_track.dto.json"
+    private val releaseDto = "/dto/release.dto.json"
 
     @Test
     fun test_ReleaseImageDtoDeserialized() {

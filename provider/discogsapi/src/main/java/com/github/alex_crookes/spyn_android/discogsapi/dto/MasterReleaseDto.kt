@@ -3,6 +3,11 @@ package com.github.alex_crookes.spyn_android.discogsapi.dto
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * The Master release is the over-arching "Master" version of an single release by an artist. The
+ * implication here is that the release may be on multiple formats, released at different times
+ * (i.e. re-pressings, remasters etc) and even on alternate labels
+ */
 @Serializable
 internal data class MasterReleaseDto(
     @SerialName("id") val id: Long,
@@ -15,10 +20,10 @@ internal data class MasterReleaseDto(
     @SerialName("labels") val labels: List<EntityDto>,
     @SerialName("series") val series: List<String>,
     @SerialName("companies") val companies: List<EntityDto>,
-    @SerialName("formats") val formats: List<ReleaseFormatDto>,
     @SerialName("data_quality") val dataQuality: String,
     @SerialName("community") val community: ReleaseCommunityMetaDto,
     @SerialName("format_quantity") val formatQuantity: Int,
+    @SerialName("formats") val formats: List<ReleaseFormatDto>,
     @SerialName("date_added") val dateAdded: String,
     @SerialName("date_changed") val dateChanged: String,
     @SerialName("num_for_sale") val numberForSale: Int,

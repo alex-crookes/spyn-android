@@ -11,4 +11,5 @@ data class CollectionReleaseDto(
     @SerialName("rating") val rating: Double,
     @SerialName("basic_information") val basicInformation: CollectionBasicReleaseInformationDto,
     @SerialName("folder_id") val folder: Int,
+    @SerialName("notes") val notes: List<CollectionReleaseNotesDto>? = emptyList()
 )
