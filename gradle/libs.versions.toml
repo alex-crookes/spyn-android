@@ -15,6 +15,7 @@ material = "1.11.0"
 ktlint = "10.3.0"
 kover = "0.7.5"
 ktor = "2.3.5"
+sharedPreferences = "1.2.1"
 
 
 [libraries]
@@ -38,7 +39,8 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
-kotlin-serialization-json = { group = "org.jetbrains.kotlinx", name="kotlinx-serialization-json", version.ref = "kotlinSerialization" }
+kotlin-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinSerialization" }
+androidx-preferences = { group = "androidx.preference", name = "preference-ktx", version.ref = "sharedPreferences" }
 
 kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutines" }
 kotlin-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinCoroutines" }

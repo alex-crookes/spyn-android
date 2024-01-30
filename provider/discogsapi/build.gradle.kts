@@ -75,9 +75,16 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.kotlin.serialization.json)
+    implementation(project(":provider:preferences"))
     implementation(project(":provider:fileio"))
 
+    implementation(libs.ktor.client)
+    implementation(libs.ktor.client.negotiation)
+    implementation(libs.ktor.client.json)
+    implementation(libs.ktor.client.android)
+
     testImplementation(libs.junit)
+    testImplementation(libs.kotlin.coroutines.test)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
