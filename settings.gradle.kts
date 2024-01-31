@@ -19,8 +19,10 @@ dependencyResolutionManagement {
     }
 }
 
+
 rootProject.name = "SpynAndroid"
 include(":app")
 include(":provider:discogsapi")
 include(":provider:fileio")
 include(":provider:preferences")
+include(":repository:catalog")
