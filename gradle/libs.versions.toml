@@ -18,7 +18,7 @@ ktor = "2.3.5"
 sharedPreferences = "1.2.1"
 sdk-compile = "34"
 sdk-target = "34"
-sdk-min = "24"
+sdk-min = "26"
 
 
 [libraries]

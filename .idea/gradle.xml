@@ -14,6 +14,8 @@
             <option value="$PROJECT_DIR$/provider/discogsapi" />
             <option value="$PROJECT_DIR$/provider/fileio" />
             <option value="$PROJECT_DIR$/provider/preferences" />
+            <option value="$PROJECT_DIR$/repository" />
+            <option value="$PROJECT_DIR$/repository/catalog" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

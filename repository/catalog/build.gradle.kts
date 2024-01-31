@@ -12,6 +12,7 @@ dependencies {
 
     testImplementation(libs.junit)
     testImplementation(libs.kotlin.serialization.json)
+    testImplementation(libs.kotlin.coroutines.test)
     testImplementation(project(":provider:fileio"))
 
     androidTestImplementation(libs.androidx.junit)

@@ -33,10 +33,10 @@ class DiscogsCatalogApi(private val preferences: Preferences) : CatalogApi {
     // region Implementations
 
     override var authToken: String?
-        get() = preferences.getString(PreferenceKeys.authToken)
+        get() = preferences.getString(PreferenceKeys.AUTH_TOKEN)
         set(new) {
             new?.let {
-                preferences.putString(PreferenceKeys.authToken, it)
+                preferences.putString(PreferenceKeys.AUTH_TOKEN, it)
                 val authPlugin = createClientPlugin(authTokenPluginName) {
                     val authHeaderKey = "Authorization"
                     //val headerValue = "Discogs token=${new}"
@@ -53,14 +53,14 @@ class DiscogsCatalogApi(private val preferences: Preferences) : CatalogApi {
                     install(authPlugin)
                 }
             } ?: run {
-                preferences.remove(PreferenceKeys.authToken)
+                preferences.remove(PreferenceKeys.AUTH_TOKEN)
                 httpClient = null
             }
         }
 
     override suspend fun collectionForUser(
-        username: String, page: Int, folder: Int):
-            CollectionResponse {
+        username: String, page: Int, folder: Int
+    ): CollectionResponse {
         val client = httpClient ?: throw CatalogError.AuthenticationRequired("Missing Auth Token")
 
         val path = "$rootPath/users/$username/collection/folders/$folder/releases?page=$page" +
@@ -81,5 +81,5 @@ class DiscogsCatalogApi(private val preferences: Preferences) : CatalogApi {
 }
 
 internal object PreferenceKeys {
-    const val authToken = "_authToken"
+    const val AUTH_TOKEN = "_authToken"
 }
