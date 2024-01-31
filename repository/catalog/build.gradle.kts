@@ -1,17 +1,18 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.jetbrainsKotlinxSerialization)
-    alias(libs.plugins.kover)
 }
 
 android {
-    namespace = "com.github.alex_crookes.fileio"
+    namespace = "com.github.alex_crookes.repo.catalog"
 }
 
 dependencies {
-    implementation(libs.kotlin.serialization.json)
+    implementation(project(":provider:discogsapi"))
 
     testImplementation(libs.junit)
+    testImplementation(libs.kotlin.serialization.json)
+    testImplementation(project(":provider:fileio"))
+
     androidTestImplementation(libs.androidx.junit)
 }
